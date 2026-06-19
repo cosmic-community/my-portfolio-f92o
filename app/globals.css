@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217 33% 18%;
+    --primary: 263 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --accent: 199 89% 56%;
+    --accent-foreground: 222 47% 6%;
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 65%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
